@@ -2,8 +2,8 @@
 #include <stdlib.h>
 #include <fstream>
 #include <sstream>
-#include <string>
 #include <math.h>
+#include <string>
 using namespace std;
 
 double train[10000][400], test[10000][400], result[10000][2];
@@ -12,7 +12,8 @@ void read(double (*p)[400], string filename)
 {
 	ifstream fin(filename);
 	string line;
-	int x = 0, y = 0;
+	int x = 0;
+	int y = 0;
 	while(getline(fin, line))
 	{
 		istringstream sin(line);
